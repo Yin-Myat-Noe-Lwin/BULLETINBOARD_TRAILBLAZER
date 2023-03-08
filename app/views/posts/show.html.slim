@@ -2,7 +2,12 @@
     == render 'header'
     .show-card
         .show-card-header
-            h1 = @model.title
+            h1 
+                = @model.title 
+                - if @model.privacy == 1
+                    i.bx.bx-world.privacy-icon
+                - elsif @model.privacy == 0
+                    i.bx.bx-lock-alt.privacy-icon
             br
             = @model.description
             br

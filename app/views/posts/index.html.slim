@@ -1,13 +1,19 @@
 .container
     == render 'header'
-    = link_to  "<button class='add-post-btn'>Add Post</button>".html_safe, new_post_path 
+    = link_to  "<button class='add-post-btn'>Add Post<i class='bx bx-plus add-post-icon'></i></button>".html_safe, new_post_path 
     .index-container 
         = @model.each do |post| 
             .index-card
                 .index-card-header 
-                    h1 = post.title
+                    h1 
+                        = post.title 
+                        - if post.privacy == 1
+                            i.bx.bx-world.privacy-icon
+                        - elsif post.privacy == 0
+                            i.bx.bx-lock-alt.privacy-icon
                     br
-                    h5 = post.updated_at
+                    h5 
+                        = post.updated_at.strftime("Last updated at: %m/%d/%Y %I:%M %p") 
                 .index-card-body
                     p = post.description
                     .index-card-btn

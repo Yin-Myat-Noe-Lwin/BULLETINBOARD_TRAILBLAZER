@@ -4,13 +4,17 @@
 
 .add-post-btn {
     float: right;
-    margin: 10px 0;
-    margin-right: 27%;
+    margin: 20px 0;
+    margin-right: 28%;
     background-color: #999999;
     color: #fff;
     border: 1px solid transparent;
     border-radius: 3px;
     padding: 5px 3px
+}
+
+.add-post-icon {
+    margin: 0 5px; 
 }
 
 .index-container {
