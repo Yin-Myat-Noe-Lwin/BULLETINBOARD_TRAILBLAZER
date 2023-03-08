@@ -1,0 +1,9 @@
+.container
+    == render 'header'
+    .show-card
+        .show-card-header
+            h1 = @model.title
+            br
+            = @model.description
+            br
+            = link_to '<button class=  "edit-btn">Edit</button>'.html_safe , edit_post_path(@model.id) 

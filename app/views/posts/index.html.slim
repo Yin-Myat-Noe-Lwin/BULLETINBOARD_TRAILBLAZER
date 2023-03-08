@@ -1,0 +1,16 @@
+.container
+    == render 'header'
+    = link_to  "<button class='add-post-btn'>Add Post</button>".html_safe, new_post_path 
+    .index-container 
+        = @model.each do |post| 
+            .index-card
+                .index-card-header 
+                    h1 = post.title
+                    br
+                    h5 = post.updated_at
+                .index-card-body
+                    p = post.description
+                    .index-card-btn
+                        = link_to '<button class="show-more-btn">ShowMore</button>'.html_safe , post_path(post.id) 
+                        = button_to 'Delete' , post_path(post.id) , method: 'delete' , class: 'delete-btn'
+    

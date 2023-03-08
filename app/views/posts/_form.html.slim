@@ -1,0 +1,23 @@
+.new-card
+    h1.new-form-title Create Your Desired Post
+    = simple_form_for @form, as: :post, url: posts_path do |f|
+        = f.label :title, "Post Title" , class: 'new-form-label'
+        br
+        = f.text_field :title , class: "new-text-field new-form-margin", placeholder: "Enter post title" 
+        br
+        =f.label :description, "Description" , class: 'new-form-label'
+        br
+        =f.text_area :description , size: "60x10" , class: "new-des-field new-form-margin" , placeholder: "Enter post description"
+        br
+        =f.label :privacy , "Privacy Setting" , class: 'new-form-label'
+        br
+        .new-rd-field
+            = f.radio_button :privacy, 1 
+            = f.label :privacy , "Public"
+            br
+            = f.radio_button :privacy, 0
+            = f.label :privacy , "Private"
+        br
+        .new-card-btn
+            = link_to 'Cancel', posts_path , class: 'create-cancel-btn'
+            = f.submit 'Create Post' , class: 'create-btn' 

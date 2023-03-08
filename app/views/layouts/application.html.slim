@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport" /
+    title BULLETINBOARD TRAILBLAZER
+    = csrf_meta_tags 
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'reset', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'common', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'post_new', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'post_index', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'post_show', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'post_edit', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    = yield
+

@@ -1,0 +1,73 @@
+.edit-card {
+    border: 1px solid #555555;
+    height: 420px;
+    width: 35%;
+    border-radius: 10px;
+    margin: 20px 30%;
+    padding: 10px ;
+    position: relative;
+}
+
+.edit-form-margin {
+    margin: 10px 0
+}
+
+.edit-form-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.edit-text-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #999999;
+}
+
+.edit-des-field {
+    width: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-rd-field {
+    margin: 10px 0;
+}
+
+.edit-card-btn {
+    position: absolute;
+    right: 3%;
+}
+
+.edit-form-btn {
+    margin: 10px 0;
+    background-color: #999999;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+.edit-cancel-btn {
+    margin: 10px 0;
+    background-color: #999999;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+.edit-form-label {
+    font-size: 15px;
+}
+
+.edit-form-label:after {
+    content:" *";
+    color: red;
+  }
+

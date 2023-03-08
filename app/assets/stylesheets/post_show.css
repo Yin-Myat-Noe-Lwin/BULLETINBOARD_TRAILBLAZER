@@ -1,0 +1,21 @@
+.show-card {
+    border: 1px solid #555555;
+    height: 180px;
+    width: 35%;
+    border-radius: 10px;
+    margin: 20px 30%;
+    padding: 20px;
+    position: relative;;
+}
+
+.edit-btn {
+    margin: 10px 0;
+    background-color: #999999;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    right: 5%;
+    position: absolute;
+}
