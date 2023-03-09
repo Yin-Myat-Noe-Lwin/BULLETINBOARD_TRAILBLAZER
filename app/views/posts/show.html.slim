@@ -2,7 +2,7 @@
     == render 'header'
     .show-card
         .show-card-header
-            h1 
+            h1.show-card-title 
                 = @model.title 
                 - if @model.privacy == 1
                     i.bx.bx-world.privacy-icon

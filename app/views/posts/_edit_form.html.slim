@@ -12,7 +12,7 @@
         =f.label :privacy , "Privacy Setting" , class: 'edit-form-label'
         br
         .edit-rd-field
-            = f.radio_button :privacy, 1 , checked: @public
+            = f.radio_button :privacy, 1 , checked: @public , class: 'edit-public'
             = f.label :privacy , "Public"
             br
             = f.radio_button :privacy, 0 , checked: @private

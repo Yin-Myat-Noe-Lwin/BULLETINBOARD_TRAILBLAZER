@@ -1,11 +1,12 @@
 .new-card {
-    border: 1px solid #555555;
-    height: 420px;
+    border: 1px solid transparent;
+    height: 430px;
     width: 35%;
     border-radius: 10px;
     margin: 20px 30%;
     padding: 10px ; 
     position: relative;
+    background: #fff;
 }
 
 .new-form-margin {
@@ -16,7 +17,7 @@
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 400;
-    color: #999999
+    color: #69bab0
 }
 
 .new-form-label {
@@ -43,6 +44,10 @@
     margin-top: 10px;
 }
 
+.new-public {
+    margin-bottom: 5px;
+}
+
 .new-card-btn {
     display: flex;
     right:  2%;
@@ -51,7 +56,7 @@
 
 .create-btn {
     margin: 10px 0;
-    background-color: #999999;
+    background: #69bab0;
     color: #fff;
     font-size: 15px;
     border: 1px solid transparent;
@@ -60,13 +65,23 @@
     margin-right: 10px;
 }
 
+.create-btn:hover {
+    background: #fff;
+    color: #69bab0;
+} 
+
 .create-cancel-btn {
     margin: 10px 0;
-    background-color: #999999;
+    background: #999999;
     color: #fff;
     font-size: 15px;
     border: 1px solid transparent;
     border-radius: 3px;
     padding: 6px 15px;
     margin-right: 10px;
+}
+
+.create-cancel-btn:hover {
+    color: #999999;
+    background: #fff;
 }
