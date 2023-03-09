@@ -1,5 +1,9 @@
 .edit-card
     h1.edit-form-title Edit Post
+    - @form.errors.full_messages.each do |message| 
+        h5.edit-form-error
+            = message 
+        br
     = simple_form_for @form, as: :post, url: post_path(@model.id), method: :patch do |f|
         = f.label :title, "Post Title" , class: 'edit-form-label'
         br

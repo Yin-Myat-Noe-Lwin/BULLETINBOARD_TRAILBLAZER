@@ -1,12 +1,12 @@
 .new-card {
     border: 1px solid transparent;
-    height: 430px;
+    /* height: 430px; */
     width: 35%;
     border-radius: 10px;
     margin: 20px 30%;
     padding: 10px ; 
-    position: relative;
     background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .new-form-margin {
@@ -27,6 +27,17 @@
 .new-form-label:after {
     content:" *";
     color: red;
+  }
+
+.new-form-error {
+    color: red;
+    font-weight: 200;
+}
+
+.new-form-error:before {
+    content:" *";
+    color: red;
+    margin-right: 10px;
   }
 
 .new-text-field {
@@ -50,8 +61,7 @@
 
 .new-card-btn {
     display: flex;
-    right:  2%;
-    position: absolute;
+    margin-left: 60%;
 }
 
 .create-btn {

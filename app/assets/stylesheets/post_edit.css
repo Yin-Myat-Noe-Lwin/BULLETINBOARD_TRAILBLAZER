@@ -1,12 +1,11 @@
 .edit-card {
     border: 1px solid transparent;
-    height: 430px;
     width: 35%;
     border-radius: 10px;
     margin: 20px 30%;
     padding: 10px ;
-    position: relative;
     background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .edit-form-margin {
@@ -38,13 +37,24 @@
 }
 
 .edit-card-btn {
-    position: absolute;
-    right: 3%;
+    margin-left: 60%;
 }
 
 .edit-public {
     margin-bottom: 10px;
 }
+
+.edit-form-error {
+    color: red;
+    font-weight: 200;
+}
+
+.edit-form-error:before {
+    content:" *";
+    color: red;
+    margin-right: 10px;
+  }
+
 
 .edit-form-btn {
     margin: 10px 0;

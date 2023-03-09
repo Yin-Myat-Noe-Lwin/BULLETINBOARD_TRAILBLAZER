@@ -1,6 +1,8 @@
 .container
     == render 'header'
     = link_to  "<button class='add-post-btn'>Add Post<i class='bx bx-plus add-post-icon'></i></button>".html_safe, new_post_path 
+    - flash.each do |type, msg| 
+        = msg
     .index-container 
         - @model.each do |post| 
             .index-card

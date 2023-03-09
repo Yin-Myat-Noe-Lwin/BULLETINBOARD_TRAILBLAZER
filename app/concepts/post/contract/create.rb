@@ -10,8 +10,8 @@ module Post::Contract
   
       validation do
         params do
-          required(:title).filled
-          required(:description).maybe(min_size?: 9)
+          required(:title).filled.maybe(min_size?: 2).maybe(max_size?: 20)
+          required(:description).filled.maybe(min_size?: 20)
           required(:privacy).filled
         end
       end

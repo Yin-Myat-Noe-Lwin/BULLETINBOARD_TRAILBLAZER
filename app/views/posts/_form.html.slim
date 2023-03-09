@@ -1,6 +1,10 @@
 .new-card
     h1.new-form-title Create Your Desired Post
     = simple_form_for @form, as: :post, url: posts_path do |f|
+        - @form.errors.full_messages.each do |message| 
+            h5.edit-form-error
+                = message 
+        br
         = f.label :title, "Post Title" , class: 'new-form-label'
         br
         = f.text_field :title , class: "new-text-field new-form-margin", placeholder: "Enter post title" 

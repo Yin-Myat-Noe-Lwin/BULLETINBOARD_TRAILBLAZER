@@ -58,9 +58,9 @@ gem 'simple_form'
 
 gem 'reform', '~> 2.2', '>= 2.2.4'
 
-gem 'jquery-rails', '~> 4.4'
-
 gem 'sass-rails'
+
+gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

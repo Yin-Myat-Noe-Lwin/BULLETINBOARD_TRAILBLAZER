@@ -84,7 +84,6 @@ class PostsController < ApplicationController
     def update
 
       _ctx = run Post::Operation::Update do |ctx|
-        flash[:notice] = "#{ctx[:model].title} has been saved"
         # return redirect_to post_path(ctx[:model].id)
         return redirect_to posts_path
       end
