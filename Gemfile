@@ -66,7 +66,9 @@ gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
 
 gem 'devise_invitable', '~> 1.5', '>= 1.5.5'
 
-gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+gem "letter_opener"   
+                               
+gem "letter_opener_web"                              
 
 gem 'jquery-rails', '~> 4.4'
 
