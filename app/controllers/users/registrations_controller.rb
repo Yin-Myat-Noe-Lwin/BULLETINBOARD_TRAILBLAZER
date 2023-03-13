@@ -6,15 +6,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
+   
     super
+
+  end
+
+    # super
+
   end
 
   # POST /resource
   def create
+   
     super
-    # if @user.persisted?
-    #   DeviseMailer.confirmation_instructions(@user).deliver
-    # end
+
   end
 
   # GET /resource/edit

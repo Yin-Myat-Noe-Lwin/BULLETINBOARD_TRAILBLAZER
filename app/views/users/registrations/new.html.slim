@@ -2,39 +2,39 @@
     == render 'posts/header'
 h2.signup-title Sign Up
 .signup-card
-  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-      = f.label :username, "User Name" , class: 'signup-form-label'
-      br
-      = f.text_field :username , class: "signup-text-field signup-form-margin"
-      br
-      = f.label :email, "Email" , class: 'signup-form-label'
-      br
-      = f.email_field :email , class: "signup-text-field signup-form-margin"
-      br
-      = f.label :password, "Password" , class: 'signup-form-label'
-      br
-      = f.password_field :password , class: "signup-text-field signup-form-margin"
-      br
-      = f.label :phone, "Phone" 
-      br
-      = f.text_field :phone , class: "signup-text-field signup-form-margin"
-      br
-      = f.label :address, "Address" 
-      br
-      = f.text_field :address , class: "signup-text-field signup-form-margin"
-      br
-      = f.label :birthday, "Birthday" 
-      br
-      = f.date_field :birthday , class: "signup-text-field signup-form-margin"
-      br
-      =f.label :privacy , "Role" , class: 'signup-form-label'
-      br
-      .signup-rd-field
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.label :username, "User Name" , class: 'signup-form-label'
+        br
+        = f.text_field :username , class: "signup-text-field signup-form-margin"
+        br
+        = f.label :email, "Email" , class: 'signup-form-label'
+        br
+        = f.email_field :email , class: "signup-text-field signup-form-margin"
+        br
+        = f.label :password, "Password" , class: 'signup-form-label'
+        br
+        = f.password_field :password , class: "signup-text-field signup-form-margin"
+        br
+        = f.label :phone, "Phone" 
+        br
+        = f.text_field :phone , class: "signup-text-field signup-form-margin"
+        br
+        = f.label :address, "Address" 
+        br
+        = f.text_field :address , class: "signup-text-field signup-form-margin"
+        br
+        = f.label :birthday, "Birthday" 
+        br
+        = f.date_field :birthday , class: "signup-text-field signup-form-margin"
+        br
+        =f.label :privacy , "Role" , class: 'signup-form-label'
+        br
+        .signup-rd-field
           = f.radio_button :role, 0 , class: 'signup-admin'
           = f.label :role , "Admin"
           br
           = f.radio_button :role, 1
           = f.label :role , "User"
-      .singup-card-btn
+        .singup-card-btn
           = f.submit 'Sign Up' , class: 'signup-btn' 
-  = link_to 'Already has an account?', new_user_session_path , class: 'login-text'
+    = link_to 'Already has an account?', new_user_session_path , class: 'login-text'
