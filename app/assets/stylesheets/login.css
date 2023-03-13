@@ -1,0 +1,56 @@
+.login-card {
+    border: 1px solid transparent;
+    width: 25%;
+    border-radius: 10px;
+    margin: 20px 37%;
+    padding: 20px ; 
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login-title {
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.login-form-margin {
+    margin: 10px 0
+}
+
+.login-text-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 95%;
+    border: 1px solid #999999;
+}
+
+.login-btn {
+    width: 95%;
+    margin: 10px 0;
+    background: #0275d8;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+}
+
+.login-btn:hover {
+    background: #fff;
+    color: #0275d8;
+}
+
+.signup-text {
+    margin-left: 20%;
+}
+
+.login-form-label {
+    font-size: 15px;
+}
+
+.login-div{
+display: flex ;
+}

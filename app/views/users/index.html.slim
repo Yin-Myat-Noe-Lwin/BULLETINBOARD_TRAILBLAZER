@@ -1,0 +1,29 @@
+.container
+    == render 'posts/header'
+    .table-div
+        table.example-table
+            tr
+                th Username
+                th Email
+                th Address
+                th Phone
+                th Birthday
+                th Action
+            - @user.each do |user|
+                tr
+                    td 
+                        = user.username
+                    td 
+                        = user.email
+                    td 
+                        = user.address
+                    td 
+                        = user.phone 
+                    td 
+                        = user.birthday                  
+                    td
+                        i.bx.bx-trash
+javascript:
+    $(document).ready(function() {
+        $(".example-table").dataTable();
+        });

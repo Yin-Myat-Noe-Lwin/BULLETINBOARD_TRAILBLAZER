@@ -7,6 +7,7 @@ module Post::Contract
       property :title
       property :description
       property :privacy
+      property :user_id
   
       validation do
         params do

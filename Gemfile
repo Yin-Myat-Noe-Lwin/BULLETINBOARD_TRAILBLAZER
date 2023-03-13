@@ -62,6 +62,16 @@ gem 'sass-rails'
 
 gem 'devise'
 
+gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
+
+gem 'devise_invitable', '~> 1.5', '>= 1.5.5'
+
+gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+
+gem 'jquery-rails', '~> 4.4'
+
+gem 'jquery-datatables'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

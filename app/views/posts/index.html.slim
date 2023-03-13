@@ -1,30 +1,52 @@
 .container
     == render 'header'
     = link_to  "<button class='add-post-btn'>Add Post<i class='bx bx-plus add-post-icon'></i></button>".html_safe, new_post_path 
+    
     - flash.each do |type, msg| 
         = msg
-    .index-container 
-        - @model.each do |post| 
-            .index-card
-                .index-card-header
-                    h1.index-card-tilte 
-                        = post.title 
-                        - if post.privacy == 1
-                            i.bx.bx-world.privacy-icon
-                        - elsif post.privacy == 0
-                            i.bx.bx-lock-alt.privacy-icon
-                    br
-                    h5.update-time 
-                        = post.updated_at.strftime("Last updated at: %m/%d/%Y %I:%M %p") 
-                .index-card-body
-                    - if post.description.length < 400
-                        p.index-card-des
-                            = post.description
-                    - else 
-                        p.show-more-height.index-card-des
-                            = post.description
-
+    .index-container
+        - @model.each do |post|
+            - if user_signed_in? && post.user_id == current_user.id
+                .index-card
+                    .index-card-header
+                        h1.index-card-tilte 
+                            = post.title 
+                            - if post.privacy == 1
+                                i.bx.bx-world.privacy-icon
+                            - elsif post.privacy == 0
+                                i.bx.bx-lock-alt.privacy-icon
+                        br
+                        h5.update-time 
+                            = post.updated_at.strftime("Last updated at: %m/%d/%Y %I:%M %p") 
+                    .index-card-body
+                        - if post.description.length < 400
+                            p.index-card-des
+                                = post.description
+                        - else 
+                            p.show-more-height.index-card-des
+                                = post.description
                     .index-card-btn
-                        = link_to '<button class="show-more-btn">ShowMore</button>'.html_safe , post_path(post.id) 
-                        = button_to 'Delete' , post_path(post.id) , method: 'delete' , class: 'delete-btn'
+                            = link_to '<button class="show-more-btn">ShowMore</button>'.html_safe , post_path(post.id) 
+                            = button_to 'Delete' , post_path(post.id) , method: 'delete' , class: 'delete-btn'
+            -else
+                - if post.privacy == 1
+                    .index-card
+                        .index-card-header
+                            h1.index-card-tilte 
+                                = post.title 
+                                - if post.privacy == 1
+                                    i.bx.bx-world.privacy-icon
+                                - elsif post.privacy == 0
+                                    i.bx.bx-lock-alt.privacy-icon
+                            br
+                            h5.update-time 
+                                = post.updated_at.strftime("Last updated at: %m/%d/%Y %I:%M %p") 
+                        .index-card-body
+                            - if post.description.length < 400
+                                p.index-card-des
+                                    = post.description
+                            - else 
+                                p.show-more-height.index-card-des
+                                    = post.description
+            
     

@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user!, only: [ :new, :edit, :destroy ]
+
     def new
 
         run Post::Operation::Create::Present do |ctx|
