@@ -2,6 +2,7 @@
     h1.header-title Bulletin Board
     - if current_user 
         .header-div
+            = current_user.username
             = link_to "User List", users_path , class: 'header-userlist'
             = link_to "Sign out", destroy_user_session_path, method: :delete  , class: 'header-signout-text'
     - else

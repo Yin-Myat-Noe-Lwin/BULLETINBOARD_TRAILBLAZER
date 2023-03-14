@@ -64,7 +64,7 @@ gem 'devise'
 
 gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
 
-gem 'devise_invitable', '~> 1.5', '>= 1.5.5'
+gem 'devise_invitable'
 
 gem "letter_opener"   
                                

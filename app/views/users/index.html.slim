@@ -22,7 +22,8 @@
                     td 
                         = user.birthday                  
                     td
-                        i.bx.bx-trash
+                        - if current_user.id != user.id
+                            = button_to 'Remove' , user_path(user.id) , method: 'delete' , class: 'delete-btn'
 javascript:
     $(document).ready(function() {
         $(".example-table").dataTable();

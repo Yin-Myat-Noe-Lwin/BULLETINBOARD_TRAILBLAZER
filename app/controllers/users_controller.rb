@@ -14,4 +14,14 @@ class UsersController < ApplicationController
 
   end
 
+  def destroy
+
+    run User::Operation::Delete
+    
+      flash[:notice] = "User deleted"
+      
+      redirect_to users_path
+
+  end
+
 end

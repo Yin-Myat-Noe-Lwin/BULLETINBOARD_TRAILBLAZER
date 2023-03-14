@@ -4,13 +4,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable 
+         :recoverable, :rememberable, :validatable , :invitable
   # devise :invitable, :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :send_email
+  after_create :send_signup_confirm_email
 
-  def send_email
+  def send_signup_confirm_email
     UserMailer.example(self).deliver_now
   end
 
