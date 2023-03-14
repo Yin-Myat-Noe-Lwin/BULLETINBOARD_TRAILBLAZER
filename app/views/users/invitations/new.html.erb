@@ -11,6 +11,11 @@
     <%= f.input :address %>
     <%= f.input :phone %>
     <%= f.input :birthday %>
+    <%= f.radio_button :role, 1  %>
+    <%= f.label :privacy , "User" %>
+    <br>
+    <%= f.radio_button :role, 0  %>
+    <%= f.label :privacy , "Admin" %>
   <% end -%>
 
   <div class="form-actions">

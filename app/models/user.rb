@@ -8,7 +8,9 @@ class User < ApplicationRecord
   # devise :invitable, :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :send_signup_confirm_email
+  
+    after_create :send_signup_confirm_email , :unless => :invited_to_sign_up?
+    after_invitation_accepted :send_signup_confirm_email
 
   def send_signup_confirm_email
     UserMailer.example(self).deliver_now
