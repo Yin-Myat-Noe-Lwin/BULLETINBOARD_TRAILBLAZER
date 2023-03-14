@@ -1,10 +1,9 @@
 .header 
     h1.header-title Bulletin Board
     - if current_user 
-        p.header-name-text
-            = current_user.username  
-        = link_to "Sign out", destroy_user_session_path, method: :delete  , class: 'header-signout-text'
-        = link_to "User List", users_path 
+        .header-div
+            = link_to "User List", users_path , class: 'header-userlist'
+            = link_to "Sign out", destroy_user_session_path, method: :delete  , class: 'header-signout-text'
     - else
         = link_to "Sign Up", new_user_registration_path , class: 'header-signup-text'
         = link_to "Log In", new_user_session_path, class: 'header-login-text'

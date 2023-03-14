@@ -1,6 +1,8 @@
 class UserMailer < ApplicationMailer
+  default from: 'testing@example.com'
+  default to: 'yinmyatnoelwin1@gmail.com'
     def example(user)
-        @user = user
-        mail(to: @user.email, subject: 'Test Email for Letter Opener')
-      end
+        mail( :to => "#{user.username} <#{user.email}>" , :subject => "Register Successful")
+    end
+
 end
