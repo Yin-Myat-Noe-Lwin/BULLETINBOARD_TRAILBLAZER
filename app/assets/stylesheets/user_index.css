@@ -1,0 +1,21 @@
+.add-user-btn {
+    float: right;
+    margin: 10px 0;
+    background: #0275d8;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+}
+
+.add-user-btn:hover {
+    color: #0275d8;
+    background: #fff;
+}
+
+.table-div {
+    margin-top: 50px ;
+    margin-left: 20% ;
+    margin-right: 20%
+}

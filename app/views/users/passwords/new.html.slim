@@ -1,0 +1,15 @@
+.container
+  == render 'posts/header'
+  h1.reset-new-title Forgot password ?
+  .reset-new-card
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| 
+      - resource.errors.full_messages.each do |msg|
+        h5.signup-form-error
+          = msg 
+        br
+      .form-inputs
+        = f.label :email, "Email" , class: 'reset-new-label'
+        br
+        = f.text_field :email, required: true, autofocus: true,  class: 'reset-new-field reset-new-margin' 
+      .form-actions
+        = f.button :submit, "Reset Password" , class: 'reset-new-btn'

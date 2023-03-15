@@ -1,0 +1,49 @@
+.invite-edit-card  {
+    border: 1px solid transparent;
+    /* height: 430px; */
+    width: 35%;
+    border-radius: 10px;
+    margin: 20px 32%;
+    padding: 10px ; 
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.invite-edit-title{
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.invite-edit-btn {
+    width: 40%;
+    margin: 10px 0;
+    background: #0275d8;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px
+}
+
+.invite-edit-btn:hover {
+    background: #fff;
+    color: #0275d8;
+}
+
+.invite-edit-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 95%;
+    border: 1px solid #999999;
+} 
+
+.invite-edit-margin {
+    margin: 10px 0
+}
+
+.invite-edit-margin {
+    margin: 10px 0
+}

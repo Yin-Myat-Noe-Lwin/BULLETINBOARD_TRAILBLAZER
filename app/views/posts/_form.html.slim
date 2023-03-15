@@ -4,7 +4,7 @@
         - @form.errors.full_messages.each do |message| 
             h5.edit-form-error
                 = message 
-        br
+            br
         = f.hidden_field :user_id , value: current_user.id
         = f.label :title, "Post Title" , class: 'new-form-label'
         br

@@ -1,17 +1,47 @@
-h2
-  = t "devise.invitations.edit.header"
+.container
+  == render 'posts/header'
+  h1.invite-edit-title 
+    = t "devise.invitations.edit.header"
+  .invite-edit-card 
+    = simple_form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f|
+      - resource.errors.full_messages.each do |msg|
+        h5.signup-form-error
+          = msg 
+        br
+      = f.hidden_field :invitation_token
+      .form-inputs
+        = f.label :username , "Username"
+        br
+        = f.text_field :username , :disabled => true  , class: 'invite-edit-field invite-edit-margin'
+        br
+        = f.label :email , "Email"
+        br
+        = f.email_field :email , :disabled => true  , class: 'invite-edit-field invite-edit-margin'
+        br
+        = f.label :phone , "Phone"
+        br
+        = f.text_field :phone , :disabled => true  , class: 'invite-edit-field invite-edit-margin'
+        br
+        = f.label :address , "Address"
+        br
+        = f.text_field :address , :disabled => true  , class: 'invite-edit-field invite-edit-margin'
+        br
 
-= simple_form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f|
-  = f.error_notification 
-  = f.hidden_field :invitation_token
+        = f.label :role, "Role"
+        br
+        = f.radio_button :role, 1  , :disabled => true 
+        = f.label :privacy , "User"  
+        br
+        = f.radio_button :role, 0 , :disabled => true 
+        =  f.label :privacy , "Admin"
+        br
+        = f.label :password , "Password"
+        br
+        = f.password_field :password   , class: 'invite-edit-field invite-edit-margin'
+        br
+        = f.label :password_confirmation , "Confirm Password"
+        br
+        = f.password_field :password_confirmation  , class: 'invite-edit-field invite-edit-margin'
 
-  .form-inputs
-    = f.input :username , :disabled => true
-    = f.input :phone , :disabled => true
-    = f.input :address , :disabled => true 
-    = f.input :birthday , :disabled => true
-    = f.input :password 
-    = f.input :password_confirmation 
-
-  .form-actions
-    = f.button :submit, t("devise.invitations.edit.submit_button") 
+      .form-actions
+        = f.button :submit, t("devise.invitations.edit.submit_button")  , class: 'invite-edit-btn'

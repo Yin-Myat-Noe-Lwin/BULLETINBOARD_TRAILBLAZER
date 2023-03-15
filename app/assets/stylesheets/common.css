@@ -38,7 +38,8 @@ body {
 }
 
 .header-div {
-    float: right; }
+    float: right;
+ }
 
 ::placeholder {
 
@@ -67,6 +68,11 @@ body {
 
 .header-signout-text {
     margin-right: 15px;
+}
+
+.nav-active {
+   color: #69bab0;
+   font-weight: bold;
 }
 
 /* 

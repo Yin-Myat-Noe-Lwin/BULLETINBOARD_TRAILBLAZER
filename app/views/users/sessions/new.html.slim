@@ -2,18 +2,21 @@
     == render 'posts/header'
 h2.login-title Sign In
 .login-card
-  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    = f.label :email, "Email" , class: 'login-form-label'
-    br
-    = f.email_field :email , class: "login-text-field signup-form-margin"
-    br
-    = f.label :password, "Password" , class: 'login-form-label'
-    br
-    = f.password_field :password , class: "login-text-field login-form-margin"
-    br
-    = link_to 'Forgot?' ,  new_user_password_path
-    .singup-card-btn
-        = f.submit 'Log In' , class: 'login-btn' 
-    .login-div
-        = f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
-        = link_to 'Not a member? Sign Up', new_user_registration_path , class: 'signup-text'
+    - resource.errors.full_messages.each do |msg|
+      = msg 
+      br
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = f.label :email, "Email" , class: 'login-form-label'
+        br
+        = f.email_field :email , class: "login-text-field signup-form-margin"
+        br
+        = f.label :password, "Password" , class: 'login-form-label'
+        br
+        = f.password_field :password , class: "login-text-field login-form-margin"
+        br
+        = link_to 'Forgot?' ,  new_user_password_path
+        .singup-card-btn
+            = f.submit 'Log In' , class: 'login-btn' 
+        .login-div
+            = f.input :remember_me, as: :boolean if devise_mapping.rememberable? 
+            = link_to 'Not a member? Sign Up', new_user_registration_path , class: 'signup-text'

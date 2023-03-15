@@ -1,0 +1,27 @@
+.container
+  == render 'posts/header'
+  h1.reset-edit-title Change your password
+
+  .reset-edit-card
+    = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| 
+      - resource.errors.full_messages.each do |msg|
+        h5.signup-form-error
+          = msg 
+        br
+
+      = f.input :reset_password_token, as: :hidden 
+      = f.full_error :reset_password_token 
+
+      .form-inputs
+        = f.label :password , label: "Password"
+        br
+        = f.password_field :password,  class: 'reset-edit-field reset-edit-margin' 
+        br
+        = f.label :password_confirmation , label: "Confirm Password" 
+        br
+        = f.password_field :password_confirmation, class: "reset-edit-field reset-edit-margin"   
+
+      .form-actions
+        = f.button :submit, "Change" , class: 'reset-edit-btn'
+
+

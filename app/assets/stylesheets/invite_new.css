@@ -1,0 +1,57 @@
+.invite-new-card  {
+    border: 1px solid transparent;
+    /* height: 430px; */
+    width: 35%;
+    border-radius: 10px;
+    margin: 20px 35%;
+    padding: 10px ; 
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.invite-new-title{
+    color: #000;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.invite-new-btn {
+    width: 40%;
+    margin: 10px 0;
+    background: #0275d8;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+}
+
+.invite-new-btn:hover {
+    background: #fff;
+    color: #0275d8;
+}
+
+.invite-new-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 95%;
+    border: 1px solid #999999;
+} 
+
+.invite-new-margin {
+    margin: 10px 0;
+}
+
+.invite-date-field {
+    height: 30px;
+    border-radius: 5px;
+    width: 15%;
+    border: 1px solid #999999;
+    margin-left: 10px;
+} 
+
+.invite-new-margin {
+    margin: 10px 0
+}

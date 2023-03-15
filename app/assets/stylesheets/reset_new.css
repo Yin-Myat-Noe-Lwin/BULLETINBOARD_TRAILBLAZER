@@ -1,4 +1,4 @@
-.signup-card {
+.reset-new-card {
     border: 1px solid transparent;
     width: 25%;
     border-radius: 10px;
@@ -8,7 +8,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.signup-title {
+.reset-new-title{
     color: #000;
     font-size: 25px;
     font-weight: 400;
@@ -16,62 +16,39 @@
     margin-top: 40px;
 }
 
-.signup-form-margin {
+.reset-new-margin {
     margin: 10px 0
 }
 
-.signup-text-field {
+.reset-new-field {
     height: 30px;
     border-radius: 5px;
     width: 95%;
     border: 1px solid #999999;
 }
 
-.signup-btn {
-    width: 95%;
-    margin: 10px 0;
+.reset-new-btn {
+    margin-top: 15px;
+    margin-bottom: 5px;
     background: #0275d8;
     color: #fff;
     font-size: 15px;
     border: 1px solid transparent;
     border-radius: 3px;
     padding: 6px 15px;
+    width: 95%;
 }
 
-.signup-btn:hover {
+.reset-new-btn:hover {
     background: #fff;
     color: #0275d8;
 }
 
-.login-text {
-    margin-left: 28%;
-    margin-top: 10px;
-}
-
-.signup-form-label {
+.reset-new-label {
     font-size: 15px;
 }
 
-.signup-form-label:after {
+.reset-new-label:after {
     content:" *";
     color: red;
-  }
-
-.signup-rd-field {
-    margin-top: 10px;
-}
-
-.signup-admin {
-    margin-bottom: 5px;
-}
-
-.signup-form-error {
-    color: red;
-    font-weight: 200;
-}
-
-.signup-form-error:before {
-    content:" *";
-    color: red;
-    margin-right: 10px;
   }
