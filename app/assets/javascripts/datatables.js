@@ -57,5 +57,3 @@ $(document).on('turbolinks:before-cache', function() {
     return dataTable = null;
   }
 });
-
- 

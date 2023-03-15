@@ -3,7 +3,7 @@
     - if current_user 
         .header-div
             = current_user.username
-            = link_to "Post List", posts_path , class: (controller?("posts") ? 'nav-active' : nil)
+            = link_to "Post List", posts_path , class: 'header-post-list'
             = link_to "User List", users_path 
             = link_to "Sign out", destroy_user_session_path, method: :delete  , class: 'header-signout-text'
     - else

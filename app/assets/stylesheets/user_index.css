@@ -19,3 +19,40 @@
     margin-left: 20% ;
     margin-right: 20%
 }
+
+.action-btn {
+    float: right;
+    display: flex;
+
+}
+
+.edit-user-btn {
+    /* margin-right: 10px; */
+    /* margin-top: 30px; */
+    background: #69bab0;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 10px;
+    margin-right: 10px;
+}
+
+.edit-user-btn:hover {
+    background: #fff;
+    color: #69bab0;
+}
+
+.delete-user-btn {
+    /* margin-top: 30px; */
+    background: #f53e3e;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 10px;
+}
+
+
+.delete-user-btn:hover {
+    color: #f53e3e;
+    background: #fff;
+}

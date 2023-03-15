@@ -1,31 +1,35 @@
 .container
     == render 'posts/header'
     .table-div
-        table.example-table
-            tr
-                th Username
-                th Email
-                th Address
-                th Phone
-                th Birthday
-                th Action
-            - @model.each do |user|
+        table.user-table
+            thead
                 tr
-                    td 
-                        = user.username
-                    td 
-                        = user.email
-                    td 
-                        = user.address
-                    td 
-                        = user.phone 
-                    td 
-                        = user.birthday                  
-                    td
-                        - if current_user.id != user.id
-                            = button_to 'Remove' , user_path(user.id) , method: 'delete' , class: 'delete-btn'
-        = link_to  "<button class='add-user-btn'>Create User<button>".html_safe , new_user_invitation_path 
+                    th Username
+                    th Email
+                    th Address
+                    th Phone
+                    th Birthday
+                    th Action      
+            tbody
+                - @model.each do |user|
+                    tr
+                        td 
+                            = user.username
+                        td 
+                            = user.email
+                        td 
+                            = user.address
+                        td 
+                            = user.phone 
+                        td 
+                            = user.birthday                  
+                        td
+                            - if current_user.id != user.id
+                                .action-btn
+                                    = link_to  "<button class='edit-user-btn'>Edit</button>".html_safe  ,  edit_user_registration_path(user.id)
+                                    = button_to 'Remove' , user_path(user.id) , method: 'delete' , class: 'delete-user-btn'                  
+        = link_to  "<button class='add-user-btn'>Create User</button>".html_safe , new_user_invitation_path 
 javascript:
-    $(document).ready(function() {
-        $(".example-table").dataTable();
-        });
+    $(document).ready(function () {
+        $('.user-table').dataTable();
+    });

@@ -58,8 +58,6 @@ gem 'simple_form'
 
 gem 'reform', '~> 2.2', '>= 2.2.4'
 
-gem 'sass-rails'
-
 gem 'devise'
 
 gem 'devise-i18n', '~> 1.9', '>= 1.9.2'
@@ -70,9 +68,11 @@ gem "letter_opener"
                                
 gem "letter_opener_web"                              
 
-gem 'jquery-rails', '~> 4.4'
+gem 'jquery-rails'
 
 gem 'jquery-datatables'
+
+gem 'sass-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

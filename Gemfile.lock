@@ -357,7 +357,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-datatables
-  jquery-rails (~> 4.4)
+  jquery-rails
   letter_opener
   letter_opener_web
   mysql2 (~> 0.5.2)
