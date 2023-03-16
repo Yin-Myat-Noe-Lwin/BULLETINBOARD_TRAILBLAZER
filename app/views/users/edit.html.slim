@@ -1,0 +1,33 @@
+.container
+    == render 'posts/header'
+    .edit-card
+        h1.edit-form-title Edit Profile
+        
+        = simple_form_for @form, as: :user, url: user_path(@model.id), method: :patch do |f|
+            - @form.errors.full_messages.each do |message| 
+                h5.edit-form-error
+                    = message 
+                br
+            = f.label :username, "Username" 
+            br
+            = f.text_field :username , class: "edit-text-field edit-form-margin"
+            br
+            = f.label :email, "Email" 
+            br
+            = f.email_field :email , class: "edit-text-field edit-form-margin"
+            br
+            = f.label :phone, "Phone" 
+            br
+            = f.text_field :phone , class: "edit-text-field edit-form-margin"
+            br
+            = f.label :address, "Address" 
+            br
+            = f.text_field :address , class: "edit-text-field edit-form-margin"
+            br
+            = f.label :birthday, "Birthday" 
+            br
+            = f.date_field :birthday , value: @model.birthday , class: "edit-text-field edit-form-margin" 
+            .pf-btn
+                = link_to 'Back', :back, class: 'create-cancel-btn'
+                = f.submit 'Update' , class: 'edit-pf-btn' 
+

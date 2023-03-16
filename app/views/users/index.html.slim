@@ -27,7 +27,12 @@
                             = user.birthday                  
                         td
                             - if current_user.id != user.id  && current_user.role == "0"
-                                = button_to 'Remove' , user_path(user.id) , method: 'delete' , class: 'delete-user-btn'                  
+                                .action-btn
+                                    = link_to  "<button class='edit-user-btn'>Edit</button>".html_safe , user_path(user.id)
+                                    = button_to 'Remove' , user_path(user.id) , method: 'delete' , class: 'delete-user-btn'   
+                            - elsif current_user.id == user.id  
+                                .action-btn
+                                    = link_to  "<button class='edit-user-btn'>Edit</button>".html_safe , user_path(user.id)                 
 javascript:
     $(document).ready(function () {
         $('.user-table').dataTable({

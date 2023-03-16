@@ -1,0 +1,20 @@
+.pf-btn {
+    display: flex;
+    margin-left: 65%;
+}
+
+.edit-pf-btn {
+    margin: 10px 0;
+    background: #69bab0;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+.edit-pf-btn:hover {
+    background: #fff;
+    color: #69bab0;
+} 

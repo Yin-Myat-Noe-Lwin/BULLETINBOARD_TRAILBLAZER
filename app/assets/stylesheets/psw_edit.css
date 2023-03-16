@@ -1,0 +1,36 @@
+.psw-btn {
+    display: flex;
+    margin-left: 68%;
+}
+
+.edit-psw-btn {
+    margin: 10px 0;
+    background: #69bab0;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+.edit-psw-btn:hover {
+    background: #fff;
+    color:#69bab0;
+}
+
+.psw-cancel-btn {
+    margin: 10px 0;
+    background: #999999;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+.psw-cancel-btn:hover {
+    background: #fff;
+    color: #999999;
+}

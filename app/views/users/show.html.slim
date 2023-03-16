@@ -1,0 +1,19 @@
+.container
+    == render 'posts/header'
+    .show-pf-card
+        h1.new-form-title Profile
+        .show-card-header
+            p.show-card-txt
+                = @model.username
+            p.show-card-txt
+                = @model.email
+            - if current_user.id ==  @model.id
+                = link_to '<button class="psw-edit-btn">Edit Password</button>'.html_safe,  edit_user_registration_path(@model.id)
+            p.show-card-txt
+                = @model.phone
+            p.show-card-txt 
+                = @model.address
+            p.show-card-txt
+                = @model.birthday
+            br
+            = link_to '<button class="pf-edit-btn">Edit</button>'.html_safe , edit_user_path(@model.id)
