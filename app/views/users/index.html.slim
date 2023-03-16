@@ -1,7 +1,8 @@
 .container
     == render 'posts/header'
     .table-div
-        = link_to  "<button class='add-user-btn'>Create User</button>".html_safe , new_user_invitation_path 
+        - if current_user.role == "0"
+            = link_to  "<button class='add-user-btn'>Create User</button>".html_safe , new_user_invitation_path 
         table.user-table
             thead
                 tr
