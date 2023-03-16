@@ -2,10 +2,10 @@
     == render 'posts/header'
 h2.login-title Sign In
 .login-card
-    - resource.errors.full_messages.each do |msg|
-      = msg 
-      br
     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        - resource.errors.full_messages.each do |msg|
+            = msg 
+            br
         = f.label :email, "Email" , class: 'login-form-label'
         br
         = f.email_field :email , class: "login-text-field signup-form-margin"
