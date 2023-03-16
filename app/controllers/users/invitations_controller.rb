@@ -16,13 +16,4 @@ class InvitationsController < Devise::InvitationsController
     def edit
     end
   
-    private
-  
-    def invite_params
-      params.require(:user).permit(:email, :invitation_token, :phone, :address, :birthday)
-    end
-  
-    def accept_invitation_params
-      params.permit(:password, :password_confirmation, :invitation_token)
-    end
   end

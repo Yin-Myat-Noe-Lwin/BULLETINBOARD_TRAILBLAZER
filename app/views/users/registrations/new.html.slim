@@ -7,15 +7,15 @@ h2.signup-title Sign Up
         h5.signup-form-error
           = msg 
         br
-    = f.label :username, "User Name" , class: 'signup-form-label'
+    = f.label :username, "User Name" 
     br
     = f.text_field :username , class: "signup-text-field signup-form-margin"
     br
-    = f.label :email, "Email" , class: 'signup-form-label'
+    = f.label :email, "Email"
     br
     = f.email_field :email , class: "signup-text-field signup-form-margin"
     br
-    = f.label :password, "Password" , class: 'signup-form-label'
+    = f.label :password, "Password"
     br
     = f.password_field :password , class: "signup-text-field signup-form-margin"
     br
@@ -31,7 +31,7 @@ h2.signup-title Sign Up
     br
     = f.date_field :birthday , class: "signup-text-field signup-form-margin"
     br
-    =f.label :privacy , "Role" , class: 'signup-form-label'
+    =f.label :privacy , "Role" 
     br
     .signup-rd-field
       = f.radio_button :role, 0 , class: 'signup-admin'

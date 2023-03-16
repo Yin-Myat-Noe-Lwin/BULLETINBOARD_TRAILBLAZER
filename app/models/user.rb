@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable , :invitable , invite_for: 2.weeks , :validate_on_invite => true
+         :recoverable, :rememberable, :validatable , :invitable , invite_for: 1.week , :validate_on_invite => true
   # devise :invitable, :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :trackable, :validatable
 
