@@ -26,14 +26,14 @@
         br
         = f.text_field :address , :disabled => true  , class: 'invite-edit-field invite-edit-margin'
         br
-
-        = f.label :role, "Role"
+        =f.label :privacy , "Role" , class: 'signup-form-label'
         br
-        = f.radio_button :role, 1  , :disabled => true 
-        = f.label :privacy , "User"  
-        br
-        = f.radio_button :role, 0 , :disabled => true 
-        =  f.label :privacy , "Admin"
+          .signup-rd-field
+          = f.radio_button :role, 0 , class: 'signup-admin' ,  :disabled => true 
+          = f.label :role , "Admin"
+          br
+          = f.radio_button :role, 1 , :disabled => true 
+          = f.label :role , "User"
         br
         = f.label :password , "Password"
         br
@@ -44,4 +44,6 @@
         = f.password_field :password_confirmation  , class: 'invite-edit-field invite-edit-margin'
 
       .form-actions
-        = f.button :submit, t("devise.invitations.edit.submit_button")  , class: 'invite-edit-btn'
+        .invite-edit-btn
+            = f.button :submit, t("devise.invitations.edit.submit_button")  , class: 'invite-new-btn'
+        

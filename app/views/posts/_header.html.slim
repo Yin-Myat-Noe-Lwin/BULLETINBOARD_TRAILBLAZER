@@ -2,10 +2,12 @@
     h1.header-title Bulletin Board
     - if current_user 
         .header-div
-            = current_user.username
+            span.header-username
+                = current_user.username
             = link_to "Post List", posts_path , class: 'header-post-list'
             = link_to "User List", users_path 
             = link_to "Sign out", destroy_user_session_path, method: :delete  , class: 'header-signout-text'
     - else
+        .header-div2
         = link_to "Sign Up", new_user_registration_path , class: 'header-signup-text'
         = link_to "Log In", new_user_session_path, class: 'header-login-text'

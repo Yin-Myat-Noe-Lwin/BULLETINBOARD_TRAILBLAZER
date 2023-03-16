@@ -119,3 +119,27 @@
     background: #fff;
     color: #f53e3e;
 }
+
+div.dataTables_length select {
+
+    height: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    border: 1px solid #363d4e;
+    border-radius: 5px;
+  
+  }
+  
+  div.dataTables_wrapper div.dataTables_filter input {
+    
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #363d4e;
+    border-radius: 5px;
+  
+  }
+
+  /* datatable */

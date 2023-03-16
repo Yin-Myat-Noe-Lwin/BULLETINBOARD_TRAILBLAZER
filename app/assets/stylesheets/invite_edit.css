@@ -4,7 +4,9 @@
     width: 35%;
     border-radius: 10px;
     margin: 20px 32%;
-    padding: 10px ; 
+    padding: 20px 0 ; 
+    padding-left: 20px;
+    padding-right: 5px;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -18,19 +20,9 @@
 }
 
 .invite-edit-btn {
-    width: 40%;
-    margin: 10px 0;
-    background: #0275d8;
-    color: #fff;
-    font-size: 15px;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    padding: 6px 15px
-}
-
-.invite-edit-btn:hover {
-    background: #fff;
-    color: #0275d8;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 70%;
 }
 
 .invite-edit-field {

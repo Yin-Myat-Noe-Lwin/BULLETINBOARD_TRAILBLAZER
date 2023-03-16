@@ -30,12 +30,16 @@
           br
           = f.date_field :birthday , class: 'invite-new-field invite-new-margin'
           br
-          = f.label :role, "Role"
+          =f.label :privacy , "Role" , class: 'signup-form-label'
           br
-          = f.radio_button :role, 1  
-          = f.label :privacy , "User" 
+          .signup-rd-field
+          = f.radio_button :role, 0 , class: 'signup-admin'
+          = f.label :role , "Admin"
           br
-          = f.radio_button :role, 0  
-          =  f.label :privacy , "Admin"
+          = f.radio_button :role, 1
+          = f.label :role , "User"
         .form-actions
-          = f.button :submit, t("devise.invitations.new.submit_button") , class: 'invite-new-btn'
+          .invite-card-btn
+            = link_to 'Cancel', users_path , class: 'invite-cancel-btn'
+            = f.button :submit, t("devise.invitations.new.submit_button") , class: 'invite-new-btn'
+

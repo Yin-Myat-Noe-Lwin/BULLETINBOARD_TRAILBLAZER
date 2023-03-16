@@ -1,7 +1,7 @@
 .add-user-btn {
     float: right;
-    margin: 10px 0;
-    background: #0275d8;
+    margin-top: 10px;  
+    background: #69bab0;
     color: #fff;
     font-size: 15px;
     border: 1px solid transparent;
@@ -10,20 +10,26 @@
 }
 
 .add-user-btn:hover {
-    color: #0275d8;
+    color: #69bab0;
     background: #fff;
 }
 
 .table-div {
     margin-top: 50px ;
     margin-left: 20% ;
-    margin-right: 20%
+    margin-right: 20%;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
 }
 
 .action-btn {
     float: right;
     display: flex;
-
+    /* margin-top: -5px; */
 }
 
 .edit-user-btn {
@@ -50,7 +56,6 @@
     border-radius: 3px;
     padding: 6px 10px;
 }
-
 
 .delete-user-btn:hover {
     color: #f53e3e;
