@@ -1,5 +1,6 @@
 # app/concepts/blog_post/contract/create.rb
 module Post::Contract
+
     class Create < Reform::Form
       require "reform/form/dry"
       include Reform::Form::Dry
@@ -7,7 +8,7 @@ module Post::Contract
       property :title
       property :description
       property :privacy
-      property :user_id
+      property :user_id 
   
       validation do
         params do
@@ -16,5 +17,6 @@ module Post::Contract
           required(:privacy).filled
         end
       end
+
     end
   end
