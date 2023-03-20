@@ -11,14 +11,5 @@ module User::Contract
       property :birthday
       property :role
       
-      validates :username, unique: true
-      validates :username, :length => { :in => 6..30}
-      validates_uniqueness_of :username, :case_sensitive => false
-      # validation do
-      #   params do
-      #     required(:username).filled
-      #   end
-      # end
-      
     end
   end
